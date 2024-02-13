@@ -14,7 +14,7 @@ map.on('load', () => {
         // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
         data: 'https://raw.githubusercontent.com/Adnarmstrng/lab2secondattempt/main/parks.geojson',
         cluster: true,
-        clusterMaxZoom: 14, // Max zoom to cluster points on
+        clusterMaxZoom: 12, // Max zoom to cluster points on
         clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
     });
 
@@ -33,9 +33,9 @@ map.on('load', () => {
                 'step',
                 ['get', 'point_count'],
                 '#51bbd6',
-                100,
+                20,
                 '#f1f075',
-                750,
+                50,
                 '#f28cb1'
             ],
             'circle-radius': [
