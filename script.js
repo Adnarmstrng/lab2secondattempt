@@ -19,7 +19,7 @@ map.addSource('parks', {
     'source': 'parks',
     'paint': {
     'circle-radius': 5,
-    'circle-color': '#888888'
+    'circle-color': '#000000'
     }
     });
 
