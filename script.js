@@ -40,6 +40,5 @@ map.addSource('censustracts', { // Create your own source ID
     },
     
     },
-    'parks' 
     );
 })
