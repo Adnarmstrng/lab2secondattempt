@@ -34,8 +34,8 @@ map.addSource('censustracts', { //unique ID for census tracts
     'source': 'censustracts', //referencing source ID
     'source-layer': 'torontoct-43nn0m', //name of source on Mapbox
     'paint': {
-    'fill-color': '#00FF00', 
-    'fill-opacity': 0.1,
+    'fill-color': 'FFFFFF', 
+    'fill-opacity': 0.4,
     'fill-outline-color': 'black'
     },
     
