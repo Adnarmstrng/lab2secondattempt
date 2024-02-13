@@ -19,7 +19,7 @@ map.addSource('parks', {
     'source': 'parks',
     'paint': {
     'circle-radius': 5,
-    'circle-color': '#007cbf'
+    'circle-color': '#888888'
     }
     });
 
@@ -35,7 +35,7 @@ map.addSource('censustracts', { //unique ID for census tracts
     'source-layer': 'torontoct-43nn0m', //name of source on Mapbox
     'paint': {
     'fill-color': '#00FF00', 
-    'fill-opacity': 0.4,
+    'fill-opacity': 0.1,
     'fill-outline-color': 'black'
     },
     
