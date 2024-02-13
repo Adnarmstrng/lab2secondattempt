@@ -1,20 +1,20 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWlkYW5hcm1zdHJvbmciLCJhIjoiY2xzam1tczhoMnJqMzJpbzZ4OWh0bmI4dyJ9.2pEogvW_3XlwcsMh4kMfCQ'; //Add default public map token from your Mapbox account
 const map = new mapboxgl.Map({
-container: 'my-map', // map container ID
-style: 'mapbox://styles/mapbox/streets-v12', // style URL
+container: 'my-map', //this ID points to my map container so that CSS can display this across the whol website
+style: 'mapbox://styles/mapbox/streets-v12', //this is a street style but I could use any style
 center: [-79.375, 43.712], // starting position [lng, lat]
 zoom: 9, // starting zoom
 });
 
 map.on('load', () => {
-// Add a data source from a GeoJSON file
+//This is a geojson I found on opendata canada showing all of the parks in the GTA
 map.addSource('parks', {
     type: 'geojson',
     data: 'https://raw.githubusercontent.com/Adnarmstrng/lab2secondattempt/main/parks.geojson' 
-   
+   //This links strait to my github
     });
     map.addLayer({
-    'id': 'parks-point',
+    'id': 'parks-point', //new unique park point id
     'type': 'circle',
     'source': 'parks',
     'paint': {
@@ -23,18 +23,18 @@ map.addSource('parks', {
     }
     });
 
-    // Add a data source from a Mapbox tileset
-map.addSource('censustracts', { // Create your own source ID
+//compare the location of parks over the census tracts
+map.addSource('censustracts', { //unique ID for census tracts
     'type': 'vector',
-    'url': 'mapbox://aidanarmstrong.a2ueu202' // Update to your mapbox tileset ID
+    'url': 'mapbox://aidanarmstrong.a2ueu202' //link to my mpabox tileset
     });
     map.addLayer({
-    'id': 'ct', // Create your own layer ID
-    'type': 'fill', // Note this is different to point data
-    'source': 'censustracts', // Must match source ID from addSource Method
-    'source-layer': 'torontoct-43nn0m', 
+    'id': 'ct', //unique vector tilset ID to customize this layer
+    'type': 'fill', 
+    'source': 'censustracts', //referencing source ID
+    'source-layer': 'torontoct-43nn0m', //name of source on Mapbox
     'paint': {
-    'fill-color': '#888888', // Test alternative colours and style properties
+    'fill-color': '#00FF00', 
     'fill-opacity': 0.4,
     'fill-outline-color': 'black'
     },
